@@ -48,9 +48,13 @@ function initHeroToggle() {
   }
   autoStep();
 
-  // Click advances manually
+  // Click toggles grayscale on current image only
+  function toggle() {
+    isGrayscale = !isGrayscale;
+    img.classList.toggle('grayscale', isGrayscale);
+  }
   const mockup = document.querySelector('.phone-mockup');
-  if (mockup) mockup.addEventListener('click', step);
+  if (mockup) mockup.addEventListener('click', toggle);
 }
 
 /* ---- Scroll fade-in ---- */
