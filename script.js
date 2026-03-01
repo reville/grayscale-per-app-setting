@@ -36,7 +36,7 @@ function initHeroToggle() {
       isGrayscale = true;
       img.classList.add('grayscale');
     }
-    if (label) label.textContent = isGrayscale ? 'Grayscale — less addictive' : 'Full color — designed to hook you';
+    if (label) label.textContent = isGrayscale ? 'Grayscale — less addictive' : 'Full color';
     if (dotColor) dotColor.classList.toggle('active', !isGrayscale);
     if (dotGray) dotGray.classList.toggle('active', isGrayscale);
   }
