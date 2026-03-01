@@ -709,6 +709,11 @@ a.stat-card:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.petition .share-buttons {
+  justify-content: center;
+  margin-top: 16px;
+}
+
 .share-buttons {
   display: flex;
   justify-content: center;
