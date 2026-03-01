@@ -21,7 +21,7 @@
   --text-secondary-dark: #a1a1a6;
   --border: rgba(0, 0, 0, 0.08);
   --max-width: 980px;
-  --section-padding: 110px;
+  --section-padding: 93px;
 }
 
 html {
@@ -116,7 +116,7 @@ body {
 /* ---- Hero ---- */
 
 .hero {
-  padding: 80px 24px 100px;
+  padding: 68px 24px 85px;
   text-align: center;
   background: var(--dark-bg);
   color: #fff;
@@ -791,11 +791,11 @@ a.stat-card:hover {
 
 @media (max-width: 600px) {
   :root {
-    --section-padding: 70px;
+    --section-padding: 60px;
   }
 
   .hero {
-    padding: 60px 20px 70px;
+    padding: 51px 20px 60px;
   }
 
   .phone-mockup {
