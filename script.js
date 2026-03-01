@@ -41,8 +41,12 @@ function initHeroToggle() {
     if (dotGray) dotGray.classList.toggle('active', isGrayscale);
   }
 
-  // Auto-step every 2 seconds: color → gray → next image color → gray → ...
-  setInterval(step, 1600);
+  // Auto-step with different durations: color 1.3s, grayscale 2.0s
+  function autoStep() {
+    const delay = isGrayscale ? 2000 : 1300;
+    setTimeout(() => { step(); autoStep(); }, delay);
+  }
+  autoStep();
 
   // Click advances manually
   const mockup = document.querySelector('.phone-mockup');
