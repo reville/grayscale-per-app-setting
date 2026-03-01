@@ -318,6 +318,8 @@ a.stat-card:hover {
   line-height: 1.4;
   max-width: 260px;
   margin: 0 auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ---- Why not global ---- */
@@ -652,28 +654,49 @@ a.stat-card:hover {
 
 /* ---- Action list ---- */
 
-.action-list {
-  text-align: left;
-  margin-top: 28px;
-  padding-left: 24px;
+.action-cards {
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.action-list li {
-  font-size: 17px;
-  line-height: 1.58;
-  color: var(--text-secondary-dark);
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  text-align: left;
 }
 
-.action-list a {
+.action-number {
+  flex-shrink: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
   color: var(--accent);
-  text-decoration: none;
 }
 
-.action-list a:hover {
+.action-card p {
+  font-size: 21px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.action-card a {
+  color: rgba(255, 255, 255, 0.92);
   text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.action-card a:hover {
+  color: #fff;
 }
 
 /* ---- Share ---- */
