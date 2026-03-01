@@ -80,6 +80,20 @@ function initScrollAnimations() {
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
   els.forEach(el => observer.observe(el));
+
+  // Rainbow headline fades to black when scrolled into view
+  const rainbow = document.getElementById('rainbow-headline');
+  if (rainbow) {
+    const rainbowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => rainbow.classList.add('faded'), 400);
+          rainbowObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    rainbowObserver.observe(rainbow);
+  }
 }
 
 /* ---- Petition form ---- */
