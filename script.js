@@ -87,7 +87,7 @@ function initScrollAnimations() {
     const rainbowObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => rainbow.classList.add('faded'), 400);
+          setTimeout(() => rainbow.classList.add('faded'), 1200);
           rainbowObserver.unobserve(entry.target);
         }
       });

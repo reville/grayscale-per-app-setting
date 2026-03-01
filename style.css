@@ -784,7 +784,7 @@ a.stat-card:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: filter 1.2s ease;
+  transition: filter 3s ease;
 }
 
 .rainbow-fade.faded {
