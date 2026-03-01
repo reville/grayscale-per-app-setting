@@ -42,7 +42,7 @@ function initHeroToggle() {
   }
 
   // Auto-step every 2 seconds: color → gray → next image color → gray → ...
-  setInterval(step, 2000);
+  setInterval(step, 1600);
 
   // Click advances manually
   const mockup = document.querySelector('.phone-mockup');
