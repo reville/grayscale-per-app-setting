@@ -650,6 +650,32 @@ a.stat-card:hover {
   display: block;
 }
 
+/* ---- Action list ---- */
+
+.action-list {
+  text-align: left;
+  margin-top: 28px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.action-list li {
+  font-size: 17px;
+  line-height: 1.58;
+  color: var(--text-secondary-dark);
+}
+
+.action-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.action-list a:hover {
+  text-decoration: underline;
+}
+
 /* ---- Share ---- */
 
 .share-section {
