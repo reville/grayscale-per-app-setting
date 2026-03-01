@@ -669,8 +669,8 @@ a.stat-card:hover {
   align-items: center;
   gap: 20px;
   padding: 22px 28px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 14px;
   text-align: left;
 }
