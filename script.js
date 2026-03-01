@@ -42,16 +42,24 @@ function initHeroToggle() {
   }
 
   // Auto-step with different durations: color 1.3s, grayscale 2.0s
-  function autoStep() {
-    const delay = isGrayscale ? 2000 : 1300;
-    setTimeout(() => { step(); autoStep(); }, delay);
-  }
-  autoStep();
+  let autoTimer = null;
+  let paused = false;
 
-  // Click toggles grayscale on current image only
+  function scheduleNext() {
+    const delay = isGrayscale ? 2000 : 1300;
+    autoTimer = setTimeout(() => { step(); scheduleNext(); }, delay);
+  }
+  scheduleNext();
+
+  // Click toggles grayscale on current image, pauses auto for 3s
+  let resumeTimer = null;
   function toggle() {
     isGrayscale = !isGrayscale;
     img.classList.toggle('grayscale', isGrayscale);
+    // Pause auto-rotation
+    clearTimeout(autoTimer);
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(scheduleNext, 3000);
   }
   const mockup = document.querySelector('.phone-mockup');
   if (mockup) mockup.addEventListener('click', toggle);
